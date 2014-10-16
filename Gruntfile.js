@@ -43,7 +43,8 @@ module.exports = function (grunt) {
                     outputStyle: 'nested'
                 },
                 files: {
-                    '<%= public_dir %>/css/main.css': '<%= src_dir %>/scss/main.scss'
+                    '<%= public_dir %>/css/main.css': '<%= src_dir %>/scss/main.scss',
+                    '<%= public_dir %>/css/plugins.css': '<%= src_dir %>/scss/plugins.scss',
                 }
             },
 
@@ -53,7 +54,8 @@ module.exports = function (grunt) {
                     outputStyle: 'compressed'
                 },
                 files: {
-                    '<%= public_dir %>/css/main.css': '<%= src_dir %>/scss/main.scss'
+                    '<%= public_dir %>/css/main.css': '<%= src_dir %>/scss/main.scss',
+                    '<%= public_dir %>/css/plugins.css': '<%= src_dir %>/scss/plugins.scss',
                 }
             },
         }, // sass
