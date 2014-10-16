@@ -6,3 +6,4 @@ Basic structure for a basic website.
 - [bower](http://bower.io)
 - [SASS](http://sass-lang.com)
 - [Twitter Bootstrap](http://getbootstrap.com)
+- [Require JS](http://requirejs.org)
