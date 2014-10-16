@@ -87,12 +87,16 @@ module.exports = function (grunt) {
                 separator: ';',
             },
 
-            dist: {
+            plugins: {
                 files: {
                     '<%= public_dir %>/js/plugins.js': [
                         '<%= files.plugin_files.js %>'
                     ],
+                }
+            },
 
+            script: {
+                files: {
                     '<%= files.public_dir %>/js/app.js': [
                         '<%= files.app_files.js %>'
                     ]
@@ -105,15 +109,15 @@ module.exports = function (grunt) {
         ==============================================================*/
         copy: {
             fonts: {
-                src: ['<%= files.plugin_files.fonts %>'],
-                dest: '<%= public_dir %>/fonts',
-                expand: true,
+                src: ['<%= files.plugin_files.fonts %>'],
+                dest: '<%= public_dir %>/fonts',
+                expand: true,
                 flatten: true,
             },
             js: {
                 src: ['<%= files.plugin_files.js_vendor %>'],
-                dest: '<%= public_dir %>/js/vendor',
-                expand: true,
+                dest: '<%= public_dir %>/js/vendor',
+                expand: true,
                 flatten: true,
             }
         }, // copy
