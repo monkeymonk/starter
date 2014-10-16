@@ -214,7 +214,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'css',
         'js',
-        'fonts',
+        'copy',
         'todo',
         'notify:prod',
     ]);
