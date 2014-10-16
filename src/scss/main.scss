@@ -1,0 +1,27 @@
+/**
+ * Starter
+ *
+ * SCSS Document - ~/scss/main.scss - Main styles
+ *
+ * @author Stéphan Zych <stephan@monkeymonk.be>
+ * started at 2014-10-16
+ */
+
+// imports
+@import "variables";
+@import "mixins";
+@import "plugins";
+@import "helpers";
+
+// global
+@import "base";
+@import "typography";
+@import "type";
+@import "forms";
+
+// components
+@import "components/something";
+
+// layout specifics
+@import "layout/generals";
+@import "layout/pages/home";

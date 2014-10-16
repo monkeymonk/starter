@@ -1,0 +1,18 @@
+/**
+ * Starter
+ *
+ * SCSS Document - ~/scss/type.scss - Type
+ *
+ * @author Stéphan Zych <stephan@monkeymonk.be>
+ * started at 2014-10-16
+ */
+
+.bg-gray-darker, .bg-gray-dark, .bg-gray, .bg-gray-light {
+    color: #fff;
+}
+
+@include bg-variant('.bg-gray-darker', $gray-darker);
+@include bg-variant('.bg-gray-dark', $gray-dark);
+@include bg-variant('.bg-gray', $gray);
+@include bg-variant('.bg-gray-light', $gray-light);
+@include bg-variant('.bg-gray-lighter', $gray-lighter);

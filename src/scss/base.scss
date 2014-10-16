@@ -1,0 +1,28 @@
+/**
+ * Starter
+ *
+ * SCSS Document - ~/scss/base.scss - Base styles
+ *
+ * @author Stéphan Zych <stephan@monkeymonk.be>
+ * started at 2014-10-16
+ */
+
+*, *:before, *:after {
+    @include box-sizing(border-box);
+}
+
+body {
+    @include backface-visibility(hidden);
+}
+
+a, input, textarea, button {
+    @extend .base-transition;
+}
+
+img {
+    @include img-responsive();
+}
+
+section {
+    padding: 40px 0;
+}

@@ -1,0 +1,33 @@
+/**
+ * Starter
+ *
+ * SCSS Document - ~/scss/helpers.scss - Helpers
+ *
+ * @author Stéphan Zych <stephan@monkeymonk.be>
+ * started at 2014-10-16
+ */
+
+.base-transition {
+    @include transition(all 0.3s ease-out);
+}
+
+.no-transition {
+    @include transition(none);
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.vertical-align {
+    display: table;
+
+    > div, > p, > a {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

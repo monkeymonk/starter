@@ -1,0 +1,24 @@
+/**
+ * Starter
+ *
+ * SCSS Document - ~/scss/forms.scss - Forms
+ *
+ * @author Stéphan Zych <stephan@monkeymonk.be>
+ * started at 2014-10-16
+ */
+
+.form-group {}
+
+.form-control {
+
+    // States
+    &:hover {}
+    &:focus {}
+    &.disabled,
+    &[disabled],
+    &[readonly] {}
+
+    // Sizes
+    &.input-lg {}
+    &.input-sm {}
+}

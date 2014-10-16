@@ -1,0 +1,38 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+Developer: Stéphan Zych
+Contact: stephan@monkeymonk.be
+Site: http://monkeymonk.be
+Twitter: @monkey_monk
+Location: Brussels, Belgium
+
+# THANKS
+
+Name: Cherry Pulp SPRL
+Contact: info@cherrypulp.com
+Site: http://cherrypulp.com
+
+
+# TECHNOLOGY
+
+Standards: HTML5 & CSS3
+Components: Javascript, jQuery, Twitter Bootstrap, Modernizr, SASS
+Software: Sublime Text 3 on MaxOSX
+
+
+
+
+
+
+             +  .        _            .-.
+                     3==({)_    .    (   \
+    +  .             _  )`\-|      *  )   \
+            .       /_`' // |\     .-'     `-a:f
+  .                B'/`-'M\_| )   /       .
+          . *       //       (   /      .
+                   B'         `-'
+
+# http://ascii-art.de

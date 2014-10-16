@@ -1,0 +1,23 @@
+/**
+ * Starter
+ *
+ * SCSS Document - ~/scss/mixins.scss - Mixins
+ *
+ * @author Stéphan Zych <stephan@monkeymonk.be>
+ * started at 2014-10-16
+ */
+
+@import "variables";
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_mixins";
+
+
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+} // font-smoothing($value: on)
