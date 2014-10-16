@@ -3,7 +3,7 @@
   "version": "0.0.0-1",
   "description": "",
   "private": true,
-  "homepage": "",
+  "homepage": "https://github.com/monkeymonk/starter",
   "author": {
     "name": "Stéphan Zych",
     "email": "stephan@monkeymonk.be"
@@ -11,13 +11,23 @@
   "contributors": [
     {
       "name": "Stéphan Zych",
-      "email": "stephan@monkeymonk.be"
+      "email": "stephan@monkeymonk.be",
+      "url": "http://monkeymonk.be"
     }
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/monkeymonk/starter.git"
   },
+  "bugs": {
+    "url": "https://github.com/monkeymonk/starter/issues"
+  },
+  "licenses": [
+    {
+      "type": "UNLICENSE",
+      "url": "https://github.com/monkeymonk/blob/master/LICENSE"
+    }
+  ],
   "devDependencies": {
     "bower": "~1.2.8",
     "grunt": "^0.4.5",
@@ -30,8 +40,6 @@
     "grunt-todo": "~0.2",
     "matchdep": "~0.3",
     "time-grunt": "~0.4.0"
-  },
-  "dependencies": {
   },
   "scripts": {
     "install": "bower install"
