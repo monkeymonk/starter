@@ -33,7 +33,7 @@
         }
     });
 
-    requirejs(['jquery', 'plugins'], function ($) {
+    requirejs(['jquery', 'plugins', 'utils'], function ($) {
         $(document).ready(initialize);
     });
 

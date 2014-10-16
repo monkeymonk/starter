@@ -45,6 +45,11 @@ module.exports = {
         js: [
             '<%= files.src_dir %>/js/main.js',
         ],
+        modules: {
+            utils: [
+                '<%= files.src_dir %>/js/helpers/utils.js',
+            ]
+        },
         scss: [
             '<%= files.src_dir %>/scss/main.scss'
         ]

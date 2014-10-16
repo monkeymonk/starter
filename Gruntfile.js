@@ -86,6 +86,11 @@ module.exports = function (grunt) {
                 src: ['<%= files.plugin_files.js %>'],
             },
 
+            utils: {
+                dest: '<%= public_dir %>/js/utils.js',
+                src: ['<%= files.app_files.modules.utils %>'],
+            },
+
             script: {
                 dest: '<%= public_dir %>/js/app.js',
                 src: ['<%= files.app_files.js %>'],
@@ -121,11 +126,19 @@ module.exports = function (grunt) {
                 }
             },
 
+            utils: {
+                files: {
+                    '<%= files.public_dir %>/js/utils.js': [
+                        '<%= files.app_files.modules.utils %>'
+                    ],
+                }
+            },
+
             script: {
                 files: {
                     '<%= files.public_dir %>/js/app.js': [
                         '<%= files.app_files.js %>'
-                    ]
+                    ],
                 }
             }
         }, // uglify
