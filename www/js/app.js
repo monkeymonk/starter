@@ -1,2 +1,2 @@
-/** * Starter - v0.0.0-1 - 2014-10-16 *  * Copyright (c) 2014 Stéphan Zych */
+/** * Starter - v0.0.0-1 - 2014-10-17 * https://github.com/monkeymonk/starter * Copyright (c) 2014 Stéphan Zych */
 !function(a,b,c){"use strict";var d=function(){console.log("# initialized")};c(b).ready(d)}(window,document,window.jQuery);
