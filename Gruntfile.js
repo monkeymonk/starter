@@ -24,10 +24,10 @@ module.exports = function (grunt) {
          * pairs are evaluated based on this very configuration object.
          */
         meta: {
-            banner: '/**'
-                + ' * <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>'
-                + ' * <%= pkg.homepage %>'
-                + ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>'
+            banner: '/**\n'
+                + ' * <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n'
+                + ' * <%= pkg.homepage %>\n'
+                + ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n'
                 + ' */\n'
         }, // meta
 
@@ -43,7 +43,8 @@ module.exports = function (grunt) {
                     outputStyle: 'nested'
                 },
                 files: {
-                    '<%= public_dir %>/css/main.css': '<%= src_dir %>/scss/main.scss'
+                    '<%= public_dir %>/css/main.css': '<%= src_dir %>/scss/main.scss',
+                    '<%= public_dir %>/css/plugins.css': '<%= src_dir %>/scss/plugins.scss',
                 }
             },
 
@@ -53,7 +54,8 @@ module.exports = function (grunt) {
                     outputStyle: 'compressed'
                 },
                 files: {
-                    '<%= public_dir %>/css/main.css': '<%= src_dir %>/scss/main.scss'
+                    '<%= public_dir %>/css/main.css': '<%= src_dir %>/scss/main.scss',
+                    '<%= public_dir %>/css/plugins.css': '<%= src_dir %>/scss/plugins.scss',
                 }
             },
         }, // sass
@@ -68,6 +70,18 @@ module.exports = function (grunt) {
             },
 
             plugins: {
+                options: {
+                    banner: '(function (factory) {'
+                        + "if (typeof define === 'function' && define.amd) {"
+                            + "define(['jquery'], factory);"
+                        + "} else if (typeof exports === 'object') {"
+                            + "factory(require('jquery'));"
+                        + '} else {'
+                            + 'factory(jQuery);'
+                        + '}'
+                    + '}(function ($) {',
+                    footer: '}));',
+                },
                 dest: '<%= public_dir %>/js/plugins.js',
                 src: ['<%= files.plugin_files.js %>'],
             },
@@ -87,12 +101,28 @@ module.exports = function (grunt) {
                 separator: ';',
             },
 
-            dist: {
+            plugins: {
+                options: {
+                    banner: '(function (factory) {'
+                        + "if (typeof define === 'function' && define.amd) {"
+                            + "define(['jquery'], factory);"
+                        + "} else if (typeof exports === 'object') {"
+                            + "factory(require('jquery'));"
+                        + '} else {'
+                            + 'factory(jQuery);'
+                        + '}'
+                    + '}(function ($) {',
+                    footer: '}));',
+                },
                 files: {
                     '<%= public_dir %>/js/plugins.js': [
                         '<%= files.plugin_files.js %>'
                     ],
+                }
+            },
 
+            script: {
+                files: {
                     '<%= files.public_dir %>/js/app.js': [
                         '<%= files.app_files.js %>'
                     ]

@@ -7,7 +7,7 @@
  * started at 2014-10-16
  */
 
-(function (window, document, $) {
+(function (window) {
     'use strict';
 
     /**
@@ -15,10 +15,26 @@
      * @return {void}
      */
     var initialize = function () {
+        // load plugins.css dependency
+        $('<link/>', {
+           rel: 'stylesheet',
+           type: 'text/css',
+           href: 'css/plugins.css'
+        }).appendTo('head');
+
         console.log('# initialized');
     }; // initialize
 
 
-    $(document).ready(initialize);
+    requirejs.config({
+        baseUrl: 'js',
+        paths: {
+            'jquery': 'vendor/jquery.min'
+        }
+    });
 
-}) (window, document, window.jQuery);
+    requirejs(['jquery', 'plugins'], function ($) {
+        $(document).ready(initialize);
+    });
+
+}) (window);

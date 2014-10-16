@@ -32,6 +32,7 @@ module.exports = {
             '<%= files.pkg_dir %>/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
         ],
         js_vendor: [
+            '<%= pkg_dir %>/requirejs/require.js',
             '<%= pkg_dir %>/jquery/dist/jquery.min.js',
             '<%= pkg_dir %>/jquery/dist/jquery.min.map',
         ]

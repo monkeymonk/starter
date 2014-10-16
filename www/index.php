@@ -53,11 +53,7 @@
         </div>
     </div>
 
-
-    <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
-
-    <script type="text/javascript" src="js/plugins.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script data-main="js/app" src="js/vendor/require.js"></script>
 
     <!--[if lt IE 7]>
         <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

@@ -10,7 +10,8 @@
   ],
   "dependencies": {
     "bootstrap-sass-official": "~3.2.0",
-    "console-polyfill": "~0.1.1"
+    "console-polyfill": "~0.1.1",
+    "requirejs": "~2.1.15"
   },
   "devDependencies": {}
 }
