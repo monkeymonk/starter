@@ -31,6 +31,7 @@
     <link rel="canonical" href="http://..." />
     <link rel="alternate" hreflang="en" href="http://.../en" />
 
+    <link type="text/css" rel="stylesheet" href="css/plugins.css" />
     <link type="text/css" rel="stylesheet" href="css/main.css" />
 
     <!--[if lt IE 9]>
