@@ -14,7 +14,7 @@
      * Initialize scripts
      * @return {void}
      */
-    var initialize = function () {
+    function initialize() {
         // load plugins.css dependency
         $('<link/>', {
            rel: 'stylesheet',
@@ -23,7 +23,7 @@
         }).appendTo('head');
 
         console.log('# initialized');
-    }; // initialize
+    } // initialize
 
 
     requirejs.config({
@@ -33,7 +33,11 @@
         }
     });
 
-    requirejs(['jquery', 'plugins', 'utils'], function ($) {
+    requirejs([
+        'jquery',
+        'plugins',
+        'modules/test'
+    ], function ($) {
         $(document).ready(initialize);
     });
 

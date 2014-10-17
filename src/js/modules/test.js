@@ -10,6 +10,7 @@
         factory(jQuery);
     }
 }(function ($) {
-    console.log("okkk");
-    $.fn.jqueryPluginCommonJs = function () {};
+
+    console.log('ok module test');
+
 }));

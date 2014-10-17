@@ -5,7 +5,6 @@ module.exports = {
     public_dir: 'www',
     pkg_dir: 'bower_components',
     src_dir: 'src',
-    tpl_dir: '<%= files.src_dir %>/tpl',
 
     /**
      * Plugin Files
@@ -16,7 +15,7 @@ module.exports = {
             '<%= files.pkg_dir %>/font-awesome/fonts/*',
         ],
         js: [
-            '<%= pkg_dir %>/console-polyfill/index.js',
+            '<%= files.pkg_dir %>/console-polyfill/index.js',
 
             '<%= files.pkg_dir %>/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js',
             '<%= files.pkg_dir %>/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js',
@@ -32,10 +31,22 @@ module.exports = {
             '<%= files.pkg_dir %>/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
         ],
         js_vendor: [
-            '<%= pkg_dir %>/requirejs/require.js',
-            '<%= pkg_dir %>/jquery/dist/jquery.min.js',
-            '<%= pkg_dir %>/jquery/dist/jquery.min.map',
-        ]
+            '<%= files.pkg_dir %>/requirejs/require.js',
+            '<%= files.pkg_dir %>/jquery/dist/jquery.min.js',
+            '<%= files.pkg_dir %>/jquery/dist/jquery.min.map',
+        ],
+    },
+
+    /**
+     * Modules Files
+     */
+    module_files: {
+        js: [
+            '<%= files.src_dir %>/js/modules/*.js',
+        ],
+        scss: [
+            '<%= files.src_dir %>/scss/modules/*.scss',
+        ],
     },
 
     /**
@@ -43,15 +54,11 @@ module.exports = {
      */
     app_files: {
         js: [
+            '<%= files.src_dir %>/js/helpers/utils.js',
             '<%= files.src_dir %>/js/main.js',
         ],
-        modules: {
-            utils: [
-                '<%= files.src_dir %>/js/helpers/utils.js',
-            ]
-        },
         scss: [
-            '<%= files.src_dir %>/scss/main.scss'
-        ]
+            '<%= files.src_dir %>/scss/main.scss',
+        ],
     },
 };

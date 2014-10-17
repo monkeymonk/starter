@@ -16,7 +16,6 @@ module.exports = function (grunt) {
         src_dir: config.src_dir,
         public_dir: config.public_dir,
         pkg_dir: config.pkg_dir,
-        tpl_dir: config.tpl_dir,
 
         /**
          * The banner is the comment that is placed at the top of our compiled
@@ -72,13 +71,9 @@ module.exports = function (grunt) {
             plugins: {
                 options: {
                     banner: '(function (factory) {'
-                        + "if (typeof define === 'function' && define.amd) {"
-                            + "define(['jquery'], factory);"
-                        + "} else if (typeof exports === 'object') {"
-                            + "factory(require('jquery'));"
-                        + '} else {'
-                            + 'factory(jQuery);'
-                        + '}'
+                        + "if (typeof define === 'function' && define.amd) {define(['jquery'], factory);"
+                        + "} else if (typeof exports === 'object') {factory(require('jquery'));"
+                        + '} else {factory(jQuery);}'
                     + '}(function ($) {',
                     footer: '}));',
                 },
@@ -86,9 +81,11 @@ module.exports = function (grunt) {
                 src: ['<%= files.plugin_files.js %>'],
             },
 
-            utils: {
-                dest: '<%= public_dir %>/js/utils.js',
-                src: ['<%= files.app_files.modules.utils %>'],
+            modules: {
+                src: '<%= files.module_files.js %>',
+                dest: '<%= files.public_dir %>/js/modules/',
+                expand: true,
+                flatten: true,
             },
 
             script: {
@@ -109,13 +106,9 @@ module.exports = function (grunt) {
             plugins: {
                 options: {
                     banner: '(function (factory) {'
-                        + "if (typeof define === 'function' && define.amd) {"
-                            + "define(['jquery'], factory);"
-                        + "} else if (typeof exports === 'object') {"
-                            + "factory(require('jquery'));"
-                        + '} else {'
-                            + 'factory(jQuery);'
-                        + '}'
+                        + "if (typeof define === 'function' && define.amd) {define(['jquery'], factory);"
+                        + "} else if (typeof exports === 'object') {factory(require('jquery'));"
+                        + '} else {factory(jQuery);}'
                     + '}(function ($) {',
                     footer: '}));',
                 },
@@ -126,12 +119,11 @@ module.exports = function (grunt) {
                 }
             },
 
-            utils: {
-                files: {
-                    '<%= files.public_dir %>/js/utils.js': [
-                        '<%= files.app_files.modules.utils %>'
-                    ],
-                }
+            modules: {
+                src: '<%= files.module_files.js %>',
+                dest: '<%= files.public_dir %>/js/modules/',
+                expand: true,
+                flatten: true,
             },
 
             script: {
@@ -213,7 +205,6 @@ module.exports = function (grunt) {
                     usePackage: true,
                 },
                 src: [
-                    '<%= tpl_dir %>/**/*.php',
                     '<%= src_dir %>/**/*.js',
                     '<%= src_dir %>/**/*.scss',
                 ]
