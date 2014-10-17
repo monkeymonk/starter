@@ -5,7 +5,6 @@ module.exports = {
     public_dir: 'www',
     pkg_dir: 'bower_components',
     src_dir: 'src',
-    tpl_dir: '<%= files.src_dir %>/tpl',
 
     /**
      * Plugin Files
@@ -42,6 +41,7 @@ module.exports = {
      */
     app_files: {
         js: [
+            '<%= files.src_dir %>/js/helpers/utils.js',
             '<%= files.src_dir %>/js/main.js',
         ],
         scss: [
