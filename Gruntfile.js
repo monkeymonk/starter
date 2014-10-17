@@ -16,7 +16,6 @@ module.exports = function (grunt) {
         src_dir: config.src_dir,
         public_dir: config.public_dir,
         pkg_dir: config.pkg_dir,
-        tpl_dir: config.tpl_dir,
 
         /**
          * The banner is the comment that is placed at the top of our compiled
@@ -24,10 +23,10 @@ module.exports = function (grunt) {
          * pairs are evaluated based on this very configuration object.
          */
         meta: {
-            banner: '/**'
-                + ' * <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>'
-                + ' * <%= pkg.homepage %>'
-                + ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>'
+            banner: '/**\n'
+                + ' * <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n'
+                + ' * <%= pkg.homepage %>\n'
+                + ' * Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n'
                 + ' */\n'
         }, // meta
 
@@ -176,7 +175,6 @@ module.exports = function (grunt) {
                     usePackage: true,
                 },
                 src: [
-                    '<%= tpl_dir %>/**/*.php',
                     '<%= src_dir %>/**/*.js',
                     '<%= src_dir %>/**/*.scss',
                 ]
